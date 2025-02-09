@@ -25,6 +25,16 @@
         header h1 {
             font-size: 3em;
             margin: 0;
+            display: inline-block;
+            border-right: 3px solid #fff;
+            padding-right: 10px;
+            animation: typing 3s steps(30) 1s 1 normal both, blinkCaret 0.75s step-end infinite;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+            animation: fadeInText 2s ease-in-out 2s forwards;
         }
 
         nav {
@@ -99,6 +109,30 @@
             }
         }
 
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes blinkCaret {
+            50% {
+                border-color: transparent;
+            }
+        }
+
+        @keyframes fadeInText {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
         /* Smooth Scroll */
         html {
             scroll-behavior: smooth;
@@ -140,7 +174,6 @@
         <a href="#skills">Skills</a>
         <a href="#education">Education</a>
         <a href="#contact">Contact</a>
-        
     </nav>
 
     <main>
